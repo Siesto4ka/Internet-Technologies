@@ -8,16 +8,16 @@
 	<title>Document</title>
 </head>
 
-<body>
-	<!-------------->
-	<header class="header" style="text-align: center;">
+<body style="background-color: #d9d8d8;">
+
+	<header class="header" style="margin-left:30px;">
 		<h1>Лабораторна робота №1</h1>
 		<h2>Основи побудови та публікації HTML-документів</h2>
-		<h2>Варіант 1</h2>
+		<h3>Варіант 1</h3>
+		<hr>
 	</header>
-	<hr>
-	<!-------------->
-	<div class="formatted_text">
+
+	<div class="formatted_text" style="margin-left:30px;">
 		<p>
 			Для будь-якого натурального числа
 			<b>n&gt;2</b>
@@ -31,29 +31,29 @@
 		</p>
 		<hr>
 	</div>
-	<!-------------->
-	<div>
+
+	<div class="List">
 		<ul>
 			<li><b>Факультет комп’ютерних наук</b>
 				<ul>
 					<li>
-						<p>Кафедра штучного інтелекту (ШІ)</p>
+						Кафедра штучного інтелекту (ШІ)
 						<ul>
 							<li>
-								<p>Дискретна математика</p>
+								Дискретна математика
 							</li>
 							<li>
-								<p>Функціональне програмування</p>
+								Функціональне програмування
 							</li>
 						</ul>
 					</li>
 					<li>Кафедра системотехніки (СТ)
 						<ul>
 							<li>
-								<p>Системний аналіз</p>
+								Системний аналіз
 							</li>
 							<li>
-								<p>моделювання та оптимізація складних організаційно-технічних систем.</p>
+								моделювання та оптимізація складних організаційно-технічних систем.
 							</li>
 						</ul>
 					</li>
@@ -62,24 +62,24 @@
 			<li><b>Факультет комп’ютерної інженерії та управління</b>
 				<ul>
 					<li>
-						<p>Кафедра електронних обчислювальних машин (ЕОМ)</p>
+						Кафедра електронних обчислювальних машин (ЕОМ)
 						<ul>
 							<li>
-								<p>Програмування на C</p>
+								Програмування на C
 							</li>
 							<li>
-								<p>Програмування на Python</p>
+								Програмування на Python
 							</li>
 						</ul>
 					</li>
 					<li>
-						<p>Кафедра автоматизації проектування обчислювальної техніки (АПОТ)</p>
+						Кафедра автоматизації проектування обчислювальної техніки (АПОТ)
 						<ul>
 							<li>
-								<p>Мобільні системи</p>
+								Мобільні системи
 							</li>
 							<li>
-								<p>Cloud-технології</p>
+								Cloud-технології
 							</li>
 						</ul>
 					</li>
@@ -88,33 +88,110 @@
 			<li><b>Факультет автоматики і комп’ютеризованих технологій</b>
 				<ul>
 					<li>
-						<p>Кафедра фізики</p>
+						Кафедра фізики
 						<ul>
 							<li>
-								<p>Фізика</p>
+								Фізика
 							</li>
 						</ul>
 					</li>
 					<li>
-						<p>Кафедра охорони праці (ОП)</p>
+						Кафедра охорони праці (ОП)
 						<ul>
 							<li>
-								<p></p>Безпека життєдіяльності
+								Безпека життєдіяльності
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
 		</ul>
+	</div>
+
+	<div class="exchange_rate" style="margin-left:30px;">
+		<hr>
+		<h3>Курс валют</h3>
+		<table border="1px" width="33%">
+			<thead>
+				<th>Назва валюти</th>
+				<th>Літерний код</th>
+				<th>Купівля</th>
+			</thead>
+			<tbody style="text-align: center;">
+				<tr>
+					<td>Долар</td>
+					<td>USD</td>
+					<td>37.47</td>
+				</tr>
+				<tr>
+					<td>Євро</td>
+					<td>EUR</td>
+					<td>39.97</td>
+				</tr>
+				<tr>
+					<td>Дирхам</td>
+					<td>AED</td>
+					<td>8.75</td>
+				</tr>
+				<tr>
+					<td>Вірменські драми</td>
+					<td>AMD</td>
+					<td>0.08</td>
+				</tr>
+				<tr>
+					<td>Австралійські долари</td>
+					<td>AUD</td>
+					<td>22.32</td>
+				</tr>
+				<tr>
+					<td>Англійські фунти стерлінгів</td>
+					<td>GBP</td>
+					<td>45.40</td>
+				</tr>
+				<tr>
+					<td>Болгарські леви</td>
+					<td>BGN</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
 		<hr>
 	</div>
-	<!-------------->
-	<div style="margin-left:30px ;">
-		<form name="form">
-			<p><b>Який факультет обрав би ти?</b></p>
-			<p><input type="radio" name="fuck"><label>Факультет комп’ютерних наук</label><br>
-				<input type="radio" name="fuck"><label>Факультет комп’ютерної інженерії та управління</label><br>
-				<input type="radio" name="fuck"><label>Факультет автоматики і комп’ютеризованих технологій</label><br><br>
-				<input type="submit" value="Відправити">
+
+	<div class="voting" style="margin-left:30px;">
+		<h3>Голосування</h3>
+		<form method="post">
+			<label for="first_name">Ім'я:</label>
+			<input type="text" id="first_name" name="first_name" placeholder="Введіть ваше ім'я" required />
+			<br />
+			<br />
+
+			<label for="last_name">Прізвище:</label>
+			<input type="text" id="last_name" name="last_name" placeholder="Введіть ваше прізвище" required />
+			<br />
+			<br />
+
+			<label for="group">Група:</label>
+			<input type="text" id="group" name="group" placeholder="Введіть вашу групу" required />
+			<br />
+			<br />
+
+			<label for="choice">Чи подобається тобі навчатись в ХНУРЕ?</label>
+			<br>
+			<br>
+			<input type="radio" id="agree" name="agreement" value="Yes">Так
+			<input type="radio" id="disagree" name="agreement" value="No">Ні
+			<br />
+			<br />
+
+			<input type="submit" value="Надіслати">
+			<input type="reset" value="Очистити">
 		</form>
+		<br>
+		<hr>
 	</div>
+
+	<footer class="footer" style="margin-left:30px;">
+		<p>Виконав Бернадський Андрій з КУІКІ-21-4</p>
+	</footer>
