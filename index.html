@@ -5,19 +5,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>lab1</title>
 </head>
 
 <body style="background-color: #d9d8d8;">
 
-	<header class="header" style="margin-left:30px;">
+	<header id="header" style="margin-left:30px;">
 		<h1>Лабораторна робота №1</h1>
 		<h2>Основи побудови та публікації HTML-документів</h2>
 		<h3>Варіант 1</h3>
 		<hr>
 	</header>
 
-	<div class="formatted_text" style="margin-left:30px;">
+	<div id="formatted_text" style="margin-left:30px;">
 		<p>
 			Для будь-якого натурального числа
 			<b>n&gt;2</b>
@@ -32,7 +32,7 @@
 		<hr>
 	</div>
 
-	<div class="List">
+	<div id="List">
 		<ul>
 			<li><b>Факультет комп’ютерних наук</b>
 				<ul>
@@ -108,7 +108,7 @@
 		</ul>
 	</div>
 
-	<div class="exchange_rate" style="margin-left:30px;">
+	<div id="exchange_rate" style="margin-left:30px;">
 		<hr>
 		<h3>Курс валют</h3>
 		<table border="1px" width="33%">
@@ -159,7 +159,7 @@
 		<hr>
 	</div>
 
-	<div class="voting" style="margin-left:30px;">
+	<div id="voting" style="margin-left:30px;">
 		<h3>Голосування</h3>
 		<form method="post">
 			<label for="first_name">Ім'я:</label>
@@ -177,11 +177,11 @@
 			<br />
 			<br />
 
-			<label for="choice">Чи подобається тобі навчатись в ХНУРЕ?</label>
+			<label for="choice">Чи подобається вам навчатись в ХНУРЕ?</label>
 			<br>
 			<br>
-			<input type="radio" id="agree" name="agreement" value="Yes">Так
-			<input type="radio" id="disagree" name="agreement" value="No">Ні
+			<input type="radio" id="agree" name="choice" value="Yes">Так
+			<input type="radio" id="disagree" name="choice" value="No">Ні
 			<br />
 			<br />
 
@@ -192,6 +192,16 @@
 		<hr>
 	</div>
 
-	<footer class="footer" style="margin-left:30px;">
-		<p>Виконав Бернадський Андрій з КУІКІ-21-4</p>
+	<div id="navigation" >
+		<h3 style="margin-left:30px;">Навігація по сторінці</h3>
+		<ul>
+		<li><a href="#formatted_text">Відформатований текст</a></li>
+		<li><a href="#List">Списки факультетів</a></li>
+		<li><a href="#exchange_rate">Курс валют</a></li>
+		<li><a href="#voting">Голосування</a></li>
+	</ul>
+	</div>
+	
+	<footer id="footer" style="margin-left:30px; height: 15px; text-align: center;" >
+		<p><i>Виконав Бернадський Андрій з групи КУІКІ-21-4</i></p>
 	</footer>
