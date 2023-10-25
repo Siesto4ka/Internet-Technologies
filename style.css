@@ -45,11 +45,11 @@ h6 {
 .header_logo{
 	margin-top: 70px;
 	font-size: 60px;
-		letter-spacing: -3px;
-		line-height: 48px;
-		color: white;
-		font-weight: bold;
-		font-family: "Myriad Pro";
+	letter-spacing: -3px;
+	line-height: 48px;
+	color: white;
+	font-weight: bold;
+	font-family: "Myriad Pro";
 }
 
 .yellow_letter{
@@ -91,7 +91,6 @@ h6 {
  
 .nav_link:hover {
 	color: white;
-
 }
 
 .nav_link:hover::after {
@@ -164,11 +163,17 @@ input[type="radio"] {
 	background-color: #e54435;
 	cursor: pointer;
 	margin-right: 5px;
+	transition: background-color 0.3s ease;
 }
 
 input[type="radio"]:checked {
 	background-color: green;
 	border-color: #3feb50;
+}
+
+input[type="radio"]:checked:hover {
+	background-color: green;
+	cursor: auto;
 }
 
 
