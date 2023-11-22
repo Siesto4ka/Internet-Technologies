@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gamestyle</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			// Get all radio buttons and corresponding info blocks
+			var radioButtons = document.querySelectorAll('.blogs_checkbox input[type="radio"]');
+			var infoBlocks = document.querySelectorAll('.blog_info > div');
+
+			// Function to show the corresponding info block
+			function showInfoBlock(index) {
+				infoBlocks.forEach(function (block) {
+					block.style.display = 'none';
+				});
+				infoBlocks[index].style.display = 'block';
+			}
+
+			// Add event listener to each radio button
+			radioButtons.forEach(function (radioButton, index) {
+				radioButton.addEventListener('change', function () {
+					if (this.checked) {
+						showInfoBlock(index);
+					}
+				});
+			});
+
+			// Show the initial info block based on the checked radio button
+			var checkedRadioButton = document.querySelector('.blogs_checkbox input[type="radio"]:checked');
+			if (checkedRadioButton) {
+				showInfoBlock(Array.from(radioButtons).indexOf(checkedRadioButton));
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<header id="home" class="header">
+		<div class="container">
+			<div class="header_logo">
+				<span class="yellow_letter">We </span>create <br>Awesome Games
+				<div class="nav">
+					<a href="#" class="nav_link">About</a>
+					<a href="#" class="nav_link">Development</a>
+					<a href="#" class="nav_link">Projects</a>
+					<a href="#" class="nav_link">Blog</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="about_sublime" class="about_sublime">
+			<div class="left_column"><span class="span_about">About</span><br><span class="yellow_letter tut">S</span><span
+					class="span_sublime">ubl<span class="sublime_underline">ime</span></span> </div>
+			<div class="right_column">
+				<p class="top_text"> <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie
+						dignissim. Nulla pellentesque et nisiet euismod. Pellentesque quis tristique magna.</i>
+				<p class="bottom_text">
+					Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo sem,
+					molestie tincidunt
+					rhoncus vel, molestie ut ligula. Mauris vitae ullamcorper odio. Mauris id enim gravida, tempor velit non,
+					vehicula
+					lacus. Sed rutrum tempus urna, sed aliquam lectus egestas eu. Maecenas est risus, tristique volutpat
+					sagittis vel,
+					feugiat consectetur diam. Suspendisse justo sem, molestie tincidunt rhoncus vel, molestie ut ligula.
+					Mauris vitae
+					ullamcorper odio. Mauris id enim gravida, tempor velit non, vehicula lacus. Sed rutrum tempus urna, sed
+					aliquam lectus
+					egestas eu
+				</p>
+				</p>
+			</div>
+		</div>
+		<div class="gamepad">
+			<div class="gamepad_item gamepad-top">
+				<img class="gamepad_img" src="./gamepad.png" alt="gamepad_icon">
+				<div class="gamepad_title">
+					<h3>App Development</h3>
+				</div>
+				<div class="gamepad_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie dignissim. Nulla
+						pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna. <br> <br>Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nulla facilisis molestie</p>
+				</div>
+			</div>
+			<div class="gamepad_item">
+				<img class="gamepad_img" src="./gamepad.png" alt="gamepad_icon">
+				<div class="gamepad_title">
+					<h3>Game Design</h3>
+				</div>
+				<div class="gamepad_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie dignissim. Nulla
+						pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna. <br> <br>
+
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie</p>
+				</div>
+			</div>
+			<div class="gamepad_item">
+				<img class="gamepad_img" src="./gamepad.png" alt="gamepad_icon">
+				<div class="gamepad_title">
+					<h3>Content Creation</h3>
+				</div>
+				<div class="gamepad_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie dignissim. Nulla
+						pellentesque
+						et nisi
+						et euismod. Pellentesque quis tristique magna. <br> <br>Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nulla
+						facilisis molestie</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="our_works" class="featured">
+		<div class="container">
+			<div class="featured_title">
+				<span class="span_featured"><span class="yellow_letter">F</span>eature<span class="featured_underline">d
+						<span class="for_first_letter">P</span>rogects</span></span>
+			</div>
+			<div class="featured_nav">
+				<a href="#" class="nav_featured_link">All works</a>
+				<a href="#" class="nav_featured_link">Games</a>
+				<a href="#" class="nav_featured_link">Applications</a>
+				<a href="#" class="nav_featured_link nav_last">CONTENT&nbsp;DEVELOPMENT</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="games_col">
+		<div class="games_item">
+			<img class="games_img" src="./featured_1.jpg" alt="game1">
+			<div class="games_info">
+				<div class="games_text">
+					Tom Clancy's The Division
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_2.jpg" alt="game2">
+			<div class="games_info">
+				<div class="games_text">
+					Tomb Rider
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_3.jpg" alt="game3">
+			<div class="games_info">
+				<div class="games_text">
+					Stalker
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_4.jpg" alt="game4">
+			<div class="games_info">
+				<div class="games_text">
+					Call of duty
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="games_col">
+		<div class="games_item">
+			<img class="games_img" src="./featured_5.jpg" alt="game5">
+			<div class="games_info">
+				<div class="games_text">
+					Dishonored
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_6.jpg" alt="game6">
+			<div class="games_info">
+				<div class="games_text">
+					Battlefield 2042
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_7.jpg" alt="game7">
+			<div class="games_info">
+				<div class="games_text">
+					Starwars
+				</div>
+			</div>
+		</div>
+		<div class="games_item">
+			<img class="games_img" src="./featured_8.jpg" alt="game8">
+			<div class="games_info">
+				<div class="games_text">
+					Cyberpank
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="strategic">
+		<div class="container">
+			<div class="strategic_title">
+				<span class="span_featured"><span class="yellow_letter">S</span>trategi<span class="featured_underline">c
+						<span class="for_first_letter">P</span>rocess</span>
+			</div>
+			<div class="strategic_text">
+				<p class="title_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie
+					dignissim. Nulla pellentesque et nisi
+					et euismod. Pellentesque quis tristique magna.</p>
+				<p>Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo sem,
+					molestie tincidunt
+					rhoncus vel, molestie ut ligula. Mauris vitae ullamcorper odio. Mauris id enim gravida, tempor velit non,
+					vehicula
+					lacus. Sed rutrum tempus urna, sed aliquam lectus egestas eu. Maecenas est risus, tristique volutpat
+					sagittis vel,
+					feugiat consectetur diam. Suspendisse justo sem, molestie tincidunt rhoncus vel, molestie ut ligula.
+					Mauris vitae
+					ullamcorper odio. Mauris id enim gravida, tempor velit non, vehicula lacus. Sed rutrum tempus urna, sed
+					aliquam lectus
+					egestas eu. Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+					justo sem,
+					molestie tincidunt rhoncus vel, molestie ut ligula. Mauris vitae ullamcorper odio. Mauris id enim
+					gravida, tempor velit
+					non, vehicula lacus. Sed rutrum tempus urna, sed aliquam lectus egestas eu. Maecenas est risus, tristique
+					volutpat
+					sagittis vel, feugiat consectetur diam. Suspendisse justo sem, molestie tincidunt rhoncus vel, molestie
+					ut ligula.
+					Mauris vitae ullamcorper odio. Mauris id enim gravida, tempor velit non, vehicula lacus. Sed rutrum
+					tempus urna, sed
+					aliquam lectus egestas eu.</p>
+			</div>
+			<div class="strategic_description">
+				<img class="description_img_1 first" src="./description_1.jpg" alt="description_1">
+				<div class="strategic__description">
+					<div class="description_title">Our Process</div>
+					<div class="description_title_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+						facilisis molestie dignissim. Nulla pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna.</div>
+					<div class="description_text">Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur
+						diam. Suspendisse justo sem, molestie tincidunt
+						rhoncus vel, molestie ut ligula. Mauris vitae ullamcorper odio. Mauris id enim gravida, tempor velit
+						non, vehicula
+						lacus. Sed rutrum tempus urna, sed aliquam lectus egestas eu</div>
+				</div>
+			</div>
+			<div class="strategic_description">
+				<div class="strategic__description_1">
+					<div class="description_title">Method</div>
+					<div class="description_title_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+						facilisis molestie dignissim. Nulla pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna.</div>
+					<div class="description_text">Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur
+						diam. Suspendisse justo sem, molestie tincidunt</div>
+				</div>
+				<img class="description_img_2" src="./description_2.webp" alt="description_2">
+			</div>
+			<div class="strategic_description">
+				<img class="description_img_1" src="./description_3.jpg" alt="description_3">
+				<div class="strategic__description">
+					<div class="description_title">Outcome</div>
+					<div class="description_title_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+						facilisis molestie dignissim. Nulla pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna.</div>
+					<div class="description_text">Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur
+						diam. Suspendisse justo sem, molestie tincidunt</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="services" class="services">
+		<div class="container">
+			<div class="services_col">
+				<div class="services_title">
+					<span class="span_featured"><span class="yellow_letter">S</span>ervices<span
+							class="featured_underline">&nbsp;Provided</span></span>
+				</div>
+				<div class="services_about">
+					<div class="services_content content-top">
+						<div class="services_h">App Development</div>
+						<div class="services_description">Maecenas est risus, tristique volutpat sagittis vel, feugiat
+							consectetur diam. Suspendisse justo sem, molestie tincidunt
+							Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo
+							sem, molestie tincidunt
+						</div>
+					</div>
+					<div class="services_content content-top content-right">
+						<div class="services_h">Game Development</div>
+						<div class="services_description">Maecenas est risus, tristique volutpat sagittis vel, feugiat
+							consectetur diam.
+							Suspendisse justo sem, molestie tincidunt
+							Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo
+							sem, molestie
+							tincidunt
+						</div>
+					</div>
+					<div class="services_content">
+						<div class="services_h">App Design</div>
+						<div class="services_description">Maecenas est risus, tristique volutpat sagittis vel, feugiat
+							consectetur diam.
+							Suspendisse justo sem, molestie tincidunt
+							Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo
+							sem, molestie
+							tincidunt
+						</div>
+					</div>
+					<div class="services_content content-right">
+						<div class="services_h">Game Design</div>
+						<div class="services_description">Maecenas est risus, tristique volutpat sagittis vel, feugiat
+							consectetur diam.
+							Suspendisse justo sem, molestie tincidunt
+							Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo
+							sem, molestie
+							tincidunt
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="team" class="team">
+		<div class="container">
+			<div class="team_col">
+				<div class="team_title">
+					<span class="span_featured"><span class="yellow_letter">O</span>ur <span
+							class="featured_underline">Team</span></span>
+				</div>
+				<div class="our_team">
+					<div class="team_h">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie dignissim. Nulla
+						pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna.
+					</div>
+					<div class="team_text">
+						Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse justo sem,
+						molestie tincidunt
+					</div>
+					<div class="team_man">
+						<div class="team_item">
+							<div class="team_header">
+								<img class="team_img" src="./team_3.jpg" alt="man1">
+							</div>
+							<div class="team_contents">
+								<div class="team_name">
+									John Doe
+								</div>
+								<div class="team_role">
+									CoFounder / CEO
+								</div>
+							</div>
+						</div>
+
+						<div class="team_item">
+							<div class="team_header">
+								<img class="team_img" src="./team_3.jpg" alt="man1">
+							</div>
+							<div class="team_contents">
+								<div class="team_name">
+									John Doe
+								</div>
+								<div class="team_role">
+									CoFounder / CEO
+								</div>
+							</div>
+						</div>
+
+						<div class="team_item">
+							<div class="team_header">
+								<img class="team_img" src="./team_3.jpg" alt="man1">
+							</div>
+							<div class="team_contents">
+								<div class="team_name">
+									John Doe
+								</div>
+								<div class="team_role">
+									CoFounder / CEO
+								</div>
+							</div>
+						</div>
+
+						<div class="team_item">
+							<div class="team_header">
+								<img class="team_img" src="./team_3.jpg" alt="man1">
+							</div>
+							<div class="team_contents">
+								<div class="team_name">
+									John Doe
+								</div>
+								<div class="team_role">
+									CoFounder / CEO
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="testimonials" class="testimonials">
+		<div class="container">
+			<div class="testomonials_title">
+				<span class="span_featured"><span class="yellow_letter">T</span>estim<span
+						class="featured_underline">onials</span></span>
+			</div>
+			<div class="testomonial_container">
+				<div class="testomonials_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis molestie dignissim. Nulla
+						pellentesque et nisi
+						et euismod. Pellentesque quis tristique magna.</p>
+					<p class="testomonials_text_p">Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur
+						diam. Suspendisse justo sem, Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur
+						diam. Suspendisse justo sem,</p>
+					<div class="testomonials_item">
+						<img class="testomonial_img" src="./testomonial_img.jpg" alt="testomonial">
+						<div class="testomonial_name">
+							John Doe
+						</div>
+						<div class="testomonial_role">
+							CoFounder / CEO
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="blog" class="blogs">
+		<div class="container">
+			<div class="blogs_title">
+				<span class="span_featured"><span class="featured_underline"><span
+							class="yellow_letter">B</span>logs</span></span>
+				<div class="blog_col">
+					<div class="blogs_points">
+						<div class="blogs_checkbox">
+							<input id="highload0" class="checkbox-custom" name="highload0" type="radio" checked>
+							<label for="highload0" class="checkbox-custom-label">Latest Posts</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload1" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload1" class="checkbox-custom-label">App Design</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload2" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload2" class="checkbox-custom-label ">App Development</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload3" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload3" class="checkbox-custom-label ">Design Solutions</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload4" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload4" class="checkbox-custom-label ">Quality Assurance</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload5" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload5" class="checkbox-custom-label ">Development Mode</label>
+						</div>
+						<div class="blogs_checkbox ">
+							<input id="highload6" class="checkbox-custom" name="highload0" type="radio">
+							<label for="highload6" class="checkbox-custom-label ">What’s Out There</label>
+						</div>
+					</div>
+					<div class="blog_info">
+						<div class="info_posts">
+							<div class="info_content">
+								<div class="info_item">
+									<img src="./blog_1.jpg" alt="" class="info_img">
+									<div class="data_post">
+										July 4th 2016
+									</div>
+									<div class="info_title">
+										Lorem ipsum dolor sit amet,
+									</div>
+									<div class="info_text">
+										Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit.
+										Nulla facilisis molestie dignissim.
+									</div>
+								</div>
+								<div class="info_item">
+									<img src="./blog_2.jpg" alt="" class="info_img">
+									<div class="data_post">
+										June 20th 2016
+									</div>
+									<div class="info_title">
+										Lorem ipsum dolor sit amet,
+									</div>
+									<div class="info_text">
+										Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit.
+										Nulla facilisis molestie dignissim.
+									</div>
+								</div>
+								<div class="info_item">
+									<img src="./blog_3.jpg" alt="" class="info_img">
+									<div class="data_post">
+										May 6th 2016
+									</div>
+									<div class="info_title">
+										Lorem ipsum dolor sit amet,
+									</div>
+									<div class="info_text">
+										Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit.
+										Nulla facilisis molestie dignissim.
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="info_design">
+							<div class="design_content">
+								<div class="design_h">
+									App Design
+								</div>
+								<div class="design_text">
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie tincidunt
+								</div>
+							</div>
+						</div>
+						<div class="info_development">
+							<div class="design_content">
+								<div class="design_h">
+									App Development
+								</div>
+								<div class="design_text">
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+									Maecenas est risus, tristique volutpat sagittis vel, feugiat consectetur diam. Suspendisse
+									justo sem, molestie
+									tincidunt
+								</div>
+							</div>
+						</div>
+						<div class="info_solutions">
+							кавіфаіуа
+						</div>
+						<div class="info_assurance">
+							дапжєп
+						</div>
+						<div class="info_mode">
+							єжпавєж
+						</div>
+						<div id="clients" class="info_out_there">
+							владзвжоп
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contact_us" class="contact">
+		<div class="contact_col">
+			<div class="contact_map">
+				<div class="contact_sublime">
+					<p class="contact_sub"><span class="yellow_letter">S</span>ublime</p>
+				</div>
+			</div>
+			<div class="contact_us">
+				<div class="contact_container">
+					<div class="contact_header">
+						<span class="span_featured"><span class="yellow_letter">c</span><span
+								class="featured_underline">ontact <span class="yellow_letter">u</span>s&nbsp;</span></span>
+					</div>
+					<div class="dataform">
+						<form method="post">
+							<input class="name_form common_input" type="text" id="first_name" name="first_name"
+								placeholder="Your name" required>
+							<input class="number_form common_input" type="tel" id="phone_number" name="phone_number"
+								placeholder="Phone" required>
+							<input class="email_form common_input" type="email" id="email" name="email" placeholder="Email"
+								required>
+							<input class="message_form common_input" type="text" id="message" name="message"
+								placeholder="Your Message" required>
+							<input class="submit_form" type="submit" value="send">
+						</form>
+					</div>
+					<div class="location">
+						<div class="location_common">
+							<p>Location Map</p>
+							<p class="address_p">Address <span class="common_description">Hill Mist garden, Pune, 411 048.
+									India</span></p>
+							<p class="phone_p">Phone <span class="common_description">+91 12534 67890</span></p>
+							<p class="email_p">Email <span class="common_description">firkho@firkho.com</span></p>
+						</div>
+					</div>
+					<div class="social_loc">
+						<hr class="hr_loc">
+						<div class="social_items">
+							<a class="social_item" href="#" target="_blank">
+								<img class="social_public" src="./twitter.png" alt="twitter">
+							</a>
+							<a class="social_item" href="#" target="_blank">
+								<img class="social_public" src="./linkedin.png" alt="twitter">
+							</a>
+							<a class="social_item" href="#" target="_blank">
+								<img class="social_public facebook" src="./facebook.png" alt="twitter">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer_col">
+			<div class="footer_anchor">
+				<div class="footer_anchor_header">
+					<p><span class="yellow_letter">S</span>ublime</p>
+				</div>
+				<div class="footer_anchor_href">
+					<div class="anchor">
+						<a class="anchor_a" href="#home">Home</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#about_sublime">ABOUT SUBLIME</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#our_works">OUR WORKS</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#services">SERVICES</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#team">TEAM</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#testimonials">TESTIMONIALS</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#blog">BLOG</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#clients">CLIENTS</a>
+					</div>
+					<div class="anchor">
+						<a class="anchor_a" href="#contact_us">CONTACT US</a>
+					</div>
+				</div>
+				<div class="social_loc">
+					<div class="social_items">
+						<a class="social_item" href="#" target="_blank">
+							<img class="social_public twitter" src="./twitterb.png" alt="twitter">
+						</a>
+						<a class="social_item" href="#" target="_blank">
+							<img class="social_public linkedin" src="./linkedinb.png" alt="twitter">
+						</a>
+						<a class="social_item" href="#" target="_blank">
+							<img class="social_public facebook" src="./facebookb.png" alt="twitter">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer_h">
+
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
