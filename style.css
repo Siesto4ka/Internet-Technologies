@@ -1,0 +1,1851 @@
+body {
+	margin: 0;
+	font-family: 'Myriad Pro', sans-serif;
+
+	font-size: 15px;
+
+	/* min-width: 320px; */
+
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+@media(max-width:1024px) {
+	.container {
+		max-width: 970px;
+		margin: 0 auto;
+		padding: 0px 15px;
+	}
+}
+
+/* Header */
+
+.header {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background: url("./bac1.jpg") top no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+
+
+.header_logo {
+	margin-top: 70px;
+	font-size: 60px;
+	letter-spacing: -3px;
+	line-height: 48px;
+	color: white;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+}
+
+.yellow_letter {
+	color: #ffc600;
+
+}
+
+.nav {
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	margin-top: 60px;
+}
+
+.nav_link {
+
+	margin: 0 20px;
+	position: relative;
+	letter-spacing: 0px;
+	text-decoration: none;
+	color: #ffc600;
+	transition: color .2s linear;
+}
+
+.nav_link:first-child {
+	margin-left: 0px;
+}
+
+.nav_link::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: white;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 0.3s ease;
+}
+
+.nav_link:hover {
+	color: white;
+}
+
+.nav_link:hover::after {
+	width: 100%;
+}
+
+@media(max-width:1024px) {
+	.nav {
+		font-size: 24px;
+	}
+}
+
+@media(max-width:920px) {
+	.nav {
+		font-size: 20px;
+	}
+}
+
+@media(max-width:440px) {
+	.header_logo {
+		font-size: 40px;
+	}
+
+	.nav {
+		margin-top: 30px;
+		font-size: 15px;
+	}
+
+	.nav_link {
+		margin: 0 10px;
+	}
+
+	.nav_link:first-child {
+		margin-left: 0px;
+	}
+}
+
+/* About */
+
+/* .about{
+	
+} */
+.about_sublime {
+	display: grid;
+	grid-template-columns: 50% 50%;
+
+}
+
+
+.span_sublime {
+	font-weight: bold;
+	font-family: "Myriad Pro";
+	font-size: 80px;
+	margin: 0;
+	line-height: 48px;
+	letter-spacing: 4px;
+
+}
+
+.span_about {
+	font-size: 50px;
+	color: #717171;
+	line-height: 48px;
+}
+
+.tut {
+	font-family: "Myriad Pro";
+	font-size: 80px;
+	line-height: 48px;
+	letter-spacing: 4px;
+}
+
+.sublime_underline {
+
+	display: inline-block;
+	position: relative;
+}
+
+.sublime_underline::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 100%;
+	height: 1px;
+	background-color: #717171;
+
+}
+
+.left_column {
+	flex: 1;
+	max-height: 140px;
+	margin-right: 30px;
+	border-right: 1px solid #717171;
+	margin-top: 75px;
+	margin-left: 90px;
+}
+
+@media(max-width:920px) {
+	.about_sublime {
+		display: grid;
+		grid-template-columns: 44% 56%;
+
+	}
+
+	.left_column {
+		margin-left: 40px;
+		margin-right: 40px;
+		border-right: none;
+	}
+
+	.span_sublime {
+		font-size: 60px;
+	}
+
+	.span_about {
+		font-size: 40px;
+	}
+}
+
+@media(max-width:855px) {
+	.about_sublime {
+		display: block;
+	}
+
+	.left_column {
+		margin-left: 0px;
+		margin-right: 40px;
+		border-right: none;
+	}
+}
+
+.right_column {
+	flex: 2;
+	margin-top: 40px;
+}
+
+.top_text {
+	font-size: 16px;
+	color: #000000;
+	font-family: "Myriad Pro";
+
+}
+
+.bottom_text {
+	color: #636363;
+}
+
+.gamepad {
+	margin-top: 50px;
+	display: flex;
+}
+
+.gamepad_item {
+	flex: 1 1 0;
+	padding: 0px 45px;
+	margin-left: 50px;
+	text-align: center;
+}
+
+@media(max-width:1024px) {
+	.gamepad_item {
+		flex: 1 1 0;
+		padding: 0px 20px;
+		margin-left: 30px;
+		text-align: center;
+	}
+}
+
+@media(max-width:920px) {
+	.gamepad_item {
+		flex: 1 1 0;
+		padding: 0px 0px;
+		margin-left: 30px;
+		text-align: center;
+	}
+}
+
+.gamepad_img {
+	display: block;
+	width: 55px;
+	height: auto;
+	margin: 0 auto;
+	max-width: 100%;
+	border-radius: 50%;
+	border: 2px solid #ffc600;
+	padding: 10px;
+	background-color: #e8e8e8;
+}
+
+.gamepad_title {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.gamepad_text {
+
+	font-size: 12px;
+	color: #000000;
+	padding-top: 20px;
+	text-align: center;
+}
+
+@media(max-width:1024px) {
+	.gamepad_text {
+
+		font-size: 14px;
+
+	}
+}
+
+@media(max-width:575px) {
+	.gamepad {
+		display: block;
+	}
+
+	.gamepad_item {
+		margin-left: 0px;
+		padding-top: 30px;
+	}
+
+	.gamepad_title {
+		padding-top: 10px;
+	}
+
+	.gamepad_text {
+		padding-top: 0px;
+	}
+
+	.gamepad-top {
+		padding-top: 0px;
+	}
+}
+
+/* Featured */
+
+.featured {
+	margin-top: 100px;
+	display: flex;
+}
+
+.featured_title {
+	font-size: 30px;
+}
+
+.featured_title .yellow_letter {
+	font-size: 40px;
+}
+
+.span_featured {
+	line-height: 48px;
+}
+
+.featured_underline {
+
+	display: inline-block;
+	position: relative;
+}
+
+.featured_underline::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 1px;
+	background-color: #717171;
+
+}
+
+.featured_nav {
+	font-size: 10px;
+	font-family: "Myriad Pro";
+	margin-top: 20px;
+	transition: color .2s linear;
+	margin-bottom: 25px;
+}
+
+.nav_featured_link {
+	text-transform: uppercase;
+	margin: 0 10px;
+	position: relative;
+	color: black;
+	font-weight: bold;
+	letter-spacing: 0px;
+	text-decoration: none;
+}
+
+.nav_featured_link:first-child {
+	margin-left: 0px;
+}
+
+.nav_featured_link::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 1px;
+	background-color: #ffc600;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 0.3s ease;
+}
+
+@media(max-width:1024px) {
+	.featured_title {
+		font-size: 40px;
+	}
+
+	.featured_nav {
+		font-size: 14px;
+	}
+
+	.featured_title .yellow_letter {
+		font-size: 50px;
+	}
+}
+
+@media(max-width:920px) {
+	.featured_title {
+		font-size: 30px;
+	}
+
+	.featured_nav {
+		font-size: 12px;
+	}
+
+	.featured_title .yellow_letter {
+		font-size: 40px;
+	}
+}
+
+.nav_featured_link:hover {
+	color: black;
+}
+
+.nav_featured_link:hover::after {
+	width: 100%;
+}
+
+
+.games_col {
+	display: flex;
+}
+
+.games_item {
+	flex: 1 1 0;
+	position: relative;
+	background: linear-gradient(to bottom, #032c37, #1699f7);
+}
+
+.games_img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transition: opacity .2s linear;
+}
+
+.games_item:hover .games_img {
+	opacity: 0.1;
+}
+
+.games_info {
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+
+	padding: 0px 15px;
+	transform: translate3d(0, -50%, 0);
+	transition: opacity 0.2s linear;
+}
+
+.games_text {
+	font-family: "Myriad Pro";
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.games_item:hover .games_info {
+	opacity: 1;
+}
+
+@media (max-width: 750px) {
+	.games_col {
+		flex-wrap: wrap;
+	}
+
+	.games_col .games_item {
+		flex: 1 0 50%;
+
+
+	}
+}
+
+@media (max-width: 462px) {
+	.nav_featured_link:last-child {
+		margin-left: 0px;
+		position: relative;
+		top: 10px
+	}
+}
+
+
+/* Strategic */
+
+.strategic {
+	margin-top: 65px;
+}
+
+.strategic_title {
+	font-size: 30px;
+}
+
+.strategic_title .span_featured .featured_underline::after {
+	bottom: 7px;
+}
+
+.strategic_title .yellow_letter {
+	font-size: 45px;
+}
+
+.for_first_letter {
+	font-size: 40px;
+}
+
+.strategic_text {
+	font-size: 14px;
+	color: #717171;
+	font-family: "Myriad Pro";
+}
+
+.title_text {
+	font-size: 16px;
+	color: #000000;
+}
+
+.strategic_description {
+	display: flex;
+	align-items: center;
+}
+
+
+.description_img_1 {
+	margin-left: 90px;
+	width: 100%;
+	max-width: 430px;
+	max-height: 290px;
+	float: left;
+}
+
+.first {
+	margin-top: 25px;
+}
+
+.description_title {
+	font-size: 30px;
+	color: #1d1d1d;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+	padding-left: 35px;
+}
+
+.description_title_text {
+	font-size: 16px;
+	color: #000000;
+	margin: 40px 0px 25px 0px;
+	padding-left: 35px;
+	font-style: italic;
+
+}
+
+.description_text {
+	font-size: 14px;
+	color: #717171;
+	font-family: "Myriad Pro";
+	padding-left: 35px;
+}
+
+.description_img_2 {
+	width: 100%;
+	max-width: 430px;
+	max-height: 290px;
+	float: right;
+}
+
+.strategic__description_1 .description_title {
+	padding-left: 125px;
+	padding-right: 45px;
+}
+
+.strategic__description_1 .description_title_text {
+	padding-left: 125px;
+	padding-right: 45px;
+}
+
+.strategic__description_1 .description_text {
+	padding-left: 125px;
+	padding-right: 45px;
+}
+
+@media(max-width:1024px) {
+	.strategic_title {
+		font-size: 40px;
+	}
+
+	.strategic_title .yellow_letter {
+		font-size: 55px;
+	}
+
+	.description_img_1 {
+		margin-left: 30px;
+
+	}
+}
+
+@media(max-width:920px) {
+	.strategic_title {
+		font-size: 30px;
+	}
+
+	.strategic_title .yellow_letter {
+		font-size: 45px;
+	}
+
+	.description_img_1 {
+		margin-left: 0px;
+
+	}
+}
+
+@media(max-width:890px) {
+	.description_img_1 {
+		margin-left: 0px;
+		max-width: 350px;
+		max-height: 190px;
+	}
+
+	.description_img_2 {
+		max-width: 350px;
+		max-height: 190px;
+	}
+
+	.description_title_text {
+		font-size: 16px;
+		color: #000000;
+		margin: 20px 0px 25px 0px;
+		padding-left: 35px;
+		font-style: italic;
+
+	}
+
+	.strategic__description_1 .description_title {
+		padding-left: 0px;
+		padding-right: 45px;
+	}
+
+	.strategic__description_1 .description_title_text {
+		padding-left: 0px;
+		padding-right: 45px;
+	}
+
+	.strategic__description_1 .description_text {
+		padding-left: 0px;
+		padding-right: 45px;
+	}
+
+}
+
+@media(max-width:855px) {
+	.description_title {
+		font-size: 20px;
+		color: #1d1d1d;
+		font-weight: bold;
+		font-family: "Myriad Pro";
+		padding-left: 15px;
+	}
+
+	.description_title_text {
+		font-size: 13px;
+		color: #000000;
+		margin: 15px 0px 15px 0px;
+		padding-left: 15px;
+		font-style: italic;
+
+	}
+
+	.description_text {
+		font-size: 12px;
+		color: #717171;
+		font-family: "Myriad Pro";
+		padding-left: 15px;
+	}
+
+	.description_img_1 {
+		max-width: 305px;
+	}
+}
+
+@media(max-width:639px) {
+	.description_img_1 {
+		display: none;
+	}
+
+	.description_text {
+		padding-left: 0;
+	}
+
+	.description_title_text {
+		padding-left: 0;
+	}
+
+	.description_title {
+		padding-left: 0;
+	}
+
+	.description_img_2 {
+		display: none;
+	}
+
+	.strategic__description_1 {
+		padding: 20px 0px 20px 0px;
+	}
+
+	.strategic__description_1 .description_title {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.strategic__description_1 .description_title_text {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.strategic__description_1 .description_text {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+}
+
+
+
+/* Services */
+.services {
+	width: 100%;
+	background: url("./bac2.png") center no-repeat;
+	background-size: cover;
+	margin-top: 65px;
+	height: 600px;
+	max-height: 560px;
+}
+
+.services_col {
+	display: grid;
+	grid-template-columns: 33% 66%;
+}
+
+.services_title {
+	font-size: 30px;
+	padding-top: 50px;
+	color: white;
+}
+
+.services_title .span_featured .featured_underline::after {
+	bottom: 3px;
+	background-color: white;
+}
+
+.services_title .featured_underline::first-letter {
+	font-size: 40px;
+}
+
+.services_title .yellow_letter {
+	font-size: 40px;
+}
+
+.services_about {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin-top: 80px;
+}
+
+.services_content {
+	padding-top: 80px;
+	padding-right: 85px;
+}
+
+.services_h {
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.services_description {
+	font-size: 14px;
+	color: #ffffff;
+	font-family: "Myriad Pro";
+	margin-top: 25px;
+}
+
+@media(max-width:1024px) {
+	.services_title {
+		font-size: 32px;
+	}
+
+	.services_title .yellow_letter {
+		font-size: 42px;
+	}
+
+	.services_about {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		margin-top: 50px;
+		margin-left: 10px;
+	}
+
+	.services_content {
+		padding-top: 50px;
+		padding-right: 85px;
+	}
+
+	.services_h {
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	.services_description {
+		font-size: 14px;
+		color: #ffffff;
+		font-family: "Myriad Pro";
+		margin-top: 25px;
+	}
+}
+
+@media(max-width:920px) {
+	.services_title {
+		font-size: 27px;
+	}
+
+	.services_title .yellow_letter {
+		font-size: 42px;
+	}
+
+	.services_content {
+		padding-top: 80px;
+		padding-right: 55px;
+	}
+}
+
+@media(max-width:855px) {
+	.services_content {
+		padding-top: 40px;
+		padding-right: 45px;
+	}
+
+	.services_col {
+		display: block;
+	}
+}
+
+@media(max-width:630px) {
+	.services_content {
+		padding-right: 25px;
+	}
+
+	.content-right {
+		padding-right: 0px;
+	}
+
+	.content-top {
+		padding-top: 0px;
+	}
+}
+
+@media(max-width:506px) {
+	.services_about {
+		display: block;
+	}
+
+	.services {
+		height: 700px;
+		max-height: 100%;
+	}
+
+	.services_title {
+		padding-top: 30px;
+	}
+
+	.services_content {
+		padding-top: 20px;
+		margin-top: 0px;
+	}
+}
+
+@media(max-width:401px) {
+	.services {
+		height: 800px;
+		max-height: 100%;
+	}
+}
+
+
+
+
+/* Team */
+
+.team_title {
+	font-size: 30px;
+	color: #1d1d1d;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+	margin-top: 100px;
+}
+
+.team_col {
+	display: grid;
+	grid-template-columns: 25% 75%;
+}
+
+.team_title .yellow_letter {
+	font-size: 40px;
+}
+
+.team_title .featured_underline::first-letter {
+	font-size: 40px;
+}
+
+.team_title .span_featured .featured_underline::after {
+	bottom: 6px;
+}
+
+.our_team {
+	margin-top: 85px;
+
+}
+
+.team_h {
+	font-size: 16px;
+	color: #000000;
+	font-family: "Myriad Pro";
+	font-style: italic;
+	margin-bottom: 20px;
+	padding-right: 20%;
+	padding-left: 12px;
+}
+
+.team_text {
+	font-size: 16px;
+	color: #717171;
+	font-family: "Myriad Pro";
+	margin-bottom: 30px;
+	margin-right: 100px;
+	padding-right: 14%;
+	padding-left: 12px;
+}
+
+.team_man {
+	display: flex;
+	justify-content: space-between;
+}
+
+.team_item {
+	width: 25%;
+	text-align: center;
+}
+
+.team_header {
+	position: relative;
+	align-items: center;
+}
+
+
+.team_img {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	max-width: 200px;
+}
+
+.team_contents {
+	margin-bottom: 150px;
+}
+
+.team_name {
+	color: #000000;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+}
+
+.team_role {
+	font-size: 16px;
+	color: #000000;
+}
+
+@media(max-width:855px) {
+	.team_col {
+		display: block;
+	}
+
+	.our_team {
+		margin-top: 45px;
+	}
+
+	.team_title {
+		margin-top: 40px;
+	}
+}
+
+@media(max-width:500px) {
+	.team_man {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	.team_item {
+		flex: 1 0 50%;
+		text-align: center;
+		max-height: 300px;
+	}
+}
+
+/* Testimonials */
+
+.testimonials {
+	max-height: 480px;
+	background-color: #000000;
+	width: 100%;
+
+}
+
+.testomonials_title {
+	font-size: 30px;
+	padding-top: 55px;
+	color: #ffffff;
+}
+
+.testomonials_title .yellow_letter {
+	font-size: 40px;
+}
+
+.testomonials_title .span_featured .featured_underline::after {
+	bottom: 7px;
+	background-color: #ffffff;
+}
+
+.testomonial_container {
+	max-width: 835px;
+
+}
+
+.testomonials_text {
+	padding-left: 40px;
+	margin-top: 85px;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: "Myriad Pro";
+	font-style: italic;
+}
+
+.testomonials_text_p {
+	font-style: unset;
+	font-size: 14px;
+}
+
+.testomonials_item {
+	width: 130px;
+	position: relative;
+	left: 110%;
+	text-align: center;
+	bottom: 130px;
+
+}
+
+.testomonial_img {
+	max-width: 125px;
+	height: auto;
+	border-radius: 50%;
+	border: 3px solid #986300;
+
+
+}
+
+@media(max-width:1064px) {
+	.testomonial_container {
+		max-width: 735px;
+	}
+
+	.testomonials_item {
+		width: 130px;
+		position: relative;
+		left: 110%;
+		text-align: center;
+		bottom: 130px;
+	}
+}
+
+@media(max-width:955px) {
+	.testomonial_container {
+		max-width: 635px;
+	}
+}
+
+@media(max-width:855px) {
+	.testomonial_container {
+		max-width: 535px;
+	}
+
+	.testomonials_item {
+		width: 130px;
+		position: relative;
+		left: 110%;
+		text-align: center;
+		bottom: 150px;
+	}
+}
+
+@media(max-width:745px) {
+	.testomonial_container {
+		margin-top: 130px;
+	}
+
+	.testomonials_item {
+		width: 130px;
+		position: relative;
+		left: 90%;
+		text-align: center;
+		bottom: 340px;
+	}
+
+}
+
+@media(max-width:630px) {
+	.testomonials_item {
+		width: 130px;
+		position: relative;
+		left: 60%;
+		text-align: center;
+		bottom: 340px;
+	}
+}
+
+@media(max-width:470px) {
+	.testomonial_img {
+		max-width: 100px;
+	}
+}
+
+@media(max-width:427px) {
+	.testomonials_item {
+		bottom: 360px;
+	}
+}
+
+@media(max-width:350px) {
+	.testomonials_text {
+		margin-top: 0px;
+	}
+
+	.testomonial_container {
+		position: relative;
+		bottom: 70px;
+	}
+
+	.testomonials_item {
+		display: none;
+	}
+
+	.testomonial_name {
+		font-size: 14px;
+	}
+
+	.testomonial_role {
+		font-size: 14px;
+	}
+}
+
+
+
+/* Blogs */
+.blogs {
+	margin-top: 60px;
+}
+
+.blog_col {
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+.blogs_title {
+	font-size: 30px;
+}
+
+.blogs_title .yellow_letter {
+	font-size: 40px;
+}
+
+.blogs_title .span_featured .featured_underline::after {
+	height: 1px;
+}
+
+.blogs_points {
+	padding: 60px 0 0 85px;
+}
+
+.blogs_checkbox {
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	margin-bottom: 30px;
+}
+
+.blogs_checkbox:first-child {
+	margin-top: 10px;
+}
+
+.checkbox-custom {
+	display: none;
+}
+
+.checkbox-custom-label {
+	cursor: pointer;
+
+}
+
+.checkbox-custom-label {
+	transition: color .2s linear;
+}
+
+.checkbox-custom-label:hover {
+	color: #ffc600;
+}
+
+
+
+input[type="radio"]:checked+label {
+	color: #ffc600;
+}
+
+.info_content {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.info_img {
+	max-width: 220px;
+	max-height: 166px;
+}
+
+.data_post {
+	color: #ffc600;
+	font-size: 18px;
+}
+
+.info_title {
+	font-size: 14px;
+	font-weight: 700;
+	max-width: 220px;
+	margin: 30px 0 20px 0px;
+}
+
+.info_text {
+	font-size: 14px;
+	max-width: 220px;
+}
+
+.design_h {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.design_text {
+	font-size: 16px;
+}
+
+@media(max-width:920px) {
+	.blog_col {
+		display: grid;
+		grid-template-columns: 20% 80%;
+	}
+
+	.blog_info {
+		padding-left: 30px;
+	}
+
+	.blogs_points {
+		padding: 60px 0 0 35px;
+	}
+
+	.blogs_checkbox {
+		font-size: 16px;
+		font-family: "Myriad Pro";
+		margin-bottom: 30px;
+
+	}
+
+}
+
+@media(max-width:855px) {
+	.blogs_points {
+		padding: 40px 0 0 10px;
+	}
+
+	.blog_info {
+		padding-left: 10px;
+	}
+
+	.info_item {
+		padding-right: 5px;
+		text-align: center;
+	}
+
+	.info_img {
+		max-width: 200px;
+		max-height: 146px;
+	}
+
+	.data_post {
+		color: #ffc600;
+		font-size: 16px;
+	}
+
+	.info_title {
+		font-size: 12px;
+		font-weight: 700;
+		max-width: 220px;
+		margin: 15px 0 10px 0px;
+
+	}
+
+	.info_text {
+		font-size: 14px;
+		max-width: 180px;
+	}
+
+	.design_h {
+		font-size: 18px;
+		margin-bottom: 30px;
+
+	}
+
+	.design_text {
+		font-size: 16px;
+	}
+}
+
+@media(max-width:630px) {
+	.info_content {
+		flex-wrap: wrap;
+	}
+
+	.info_item {
+		padding-top: 10px;
+
+	}
+}
+
+@media(max-width:555px) {
+	.info_content {
+		justify-content: center;
+	}
+}
+
+@media(max-width:400px) {
+	.info_content {
+		justify-content: flex-end;
+	}
+}
+
+/* contact */
+
+.contact {
+	margin-top: 100px;
+	width: 100%;
+	height: 100vh;
+
+}
+
+.contact_col {
+	display: grid;
+	grid-template-columns: 40% 60%;
+
+}
+
+.contact_map {
+	width: 100%;
+	height: 100vh;
+	background: url("./contact_map.jpg") center no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+.contact_us {
+	background-color: #2046b3;
+}
+
+.contact_sublime {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 3px solid #986300;
+	background-color: #000000;
+	position: relative;
+	top: 60%;
+	left: 60%;
+}
+
+.contact_sub {
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: -1px;
+	font-weight: 700;
+	align-items: center;
+}
+
+.contact_container {
+	width: 100%;
+	max-width: 420px;
+	margin: 50px 0px 40px 75px;
+
+}
+
+.contact_header {
+	font-size: 30px;
+	color: white;
+	margin-left: 20px;
+}
+
+.contact_header .yellow_letter {
+	font-size: 55px;
+}
+
+.contact_header .featured_underline .yellow_letter {
+	color: white;
+}
+
+.contact_header .featured_underline::after {
+	bottom: 6px;
+	background-color: #ffffff;
+}
+
+.dataform {
+	margin-top: 20px;
+}
+
+.common_input {
+	background-color: transparent;
+	border-color: #fff;
+	border-style: solid;
+	caret-color: #fff;
+	padding: 10px 0 5px 10px;
+	color: #fff;
+	transition: border 0.5s ease;
+}
+
+.name_form {
+	width: 100%;
+
+}
+
+.common_input::placeholder {
+	color: #fff;
+	font-size: 16px;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.common_input:focus {
+	outline: none;
+	border-color: #ffc600;
+}
+
+.common_input:focus::placeholder {
+	opacity: 0;
+}
+
+.common_input:hover {
+	border-color: #ffc600;
+}
+
+.common_input:hover::placeholder {
+	opacity: 0.5;
+}
+
+.number_form {
+	max-width: 155px;
+	margin-top: 20px;
+}
+
+.email_form {
+	float: right;
+	max-width: 200px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.message_form {
+	margin-top: 10px;
+	width: 100%;
+	height: 70px;
+}
+
+.message_form::placeholder {
+	position: absolute;
+	bottom: 40px;
+}
+
+.submit_form {
+	width: 100%;
+	max-width: 105px;
+	height: 33px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: #ffc600;
+	border: 0;
+	margin-top: 20px;
+	transition: background .4s ease, border 0.4s ease;
+}
+
+.submit_form:hover {
+	background-color: #fff;
+	cursor: pointer;
+	border: 3px solid #e8daa9;
+}
+
+.location {
+	margin-left: 20px;
+	margin-top: 60px;
+}
+
+.location_common {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+}
+
+.address_p {
+	padding: 40px 0 20px 0;
+}
+
+
+.common_description {
+	font-size: 12px;
+	color: #ffffff;
+	font-family: "Myriad Pro";
+	font-weight: normal;
+	padding-left: 30px;
+}
+
+.phone_p .common_description {
+	padding-left: 42px;
+}
+
+.email_p .common_description {
+	padding-left: 44px;
+}
+
+.social_loc {
+	margin-top: 70px;
+}
+
+.hr_loc {
+	border: 2px solid #7386bc;
+}
+
+.social_items {
+	margin-top: 10px;
+	display: flex;
+}
+
+.social_item {
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.social_public {
+	max-width: 70%;
+	max-height: 70%;
+}
+
+.facebook {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+@media(max-width:1024px) {
+	.contact {
+		margin-top: 100px;
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.contact_map {
+		width: 100%;
+		height: 100%;
+		background: url("./contact_map.jpg") center no-repeat;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+
+}
+
+@media(max-width:855px) {
+	.contact_container {
+		width: 100%;
+		max-width: 340px;
+		margin: 40px 0px 40px 35px;
+
+	}
+
+	.number_form {
+		max-width: 125px;
+		margin-top: 20px;
+	}
+
+	.email_form {
+		float: right;
+		max-width: 160px;
+		margin-top: 20px;
+		width: 100%;
+	}
+}
+
+@media(max-width:630px) {
+	.contact_col {
+		display: block;
+	}
+
+	.contact_map {
+		display: none;
+	}
+
+	.contact_container {
+		margin-bottom: 0px;
+		padding-bottom: 10px;
+	}
+}
+
+@media(max-width:385px) {
+	.contact {
+		height: 100%;
+	}
+
+	.contact_container {
+		width: 100%;
+		max-width: 265px;
+		margin: 40px 0px 0px 30px;
+	}
+
+	.name_form {
+		max-width: 265px;
+	}
+
+	.number_form {
+		max-width: 100px;
+	}
+
+	.email_form {
+		max-width: 130px;
+	}
+
+	.location {
+		margin-left: 0px;
+	}
+
+	.common_description {
+		padding-left: 15px;
+	}
+
+	.phone_p .common_description {
+		padding-left: 27px;
+	}
+
+	.email_p .common_description {
+		padding-left: 29px;
+	}
+}
+
+
+
+
+/* Footer */
+
+.footer {
+	width: 100%;
+}
+
+.footer_col {
+	display: grid;
+	grid-template-columns: 33% 67%;
+}
+
+.footer_anchor {
+	background-color: black;
+	height: 100vh;
+}
+
+.footer_anchor_header {
+	font-size: 60px;
+	letter-spacing: -3px;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+	color: white;
+	padding-left: 25px;
+}
+
+.footer_anchor_header .yellow_letter {
+	font-size: 60px;
+	letter-spacing: -3px;
+}
+
+.footer_anchor_href {
+	padding-left: 25px;
+	position: relative;
+}
+
+.anchor {
+	font-size: 16px;
+	line-height: 36px;
+	font-weight: bold;
+	font-family: "Myriad Pro";
+}
+
+.anchor_a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	transition: color .3s ease;
+}
+
+.anchor_a:hover {
+	color: #ffc600
+}
+
+.footer_anchor_href::after {
+	content: "";
+	display: block;
+	width: 130px;
+	height: 2px;
+	background-color: #ffc600;
+	position: absolute;
+	bottom: -50px;
+}
+
+.footer_anchor .social_loc {
+	padding-left: 25px;
+}
+
+.footer_anchor .social_loc .social_items .twitter {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+.footer_anchor .social_loc .social_items .linkedin {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+.footer_h {
+	width: 100%;
+	height: 100vh;
+	background: url("./footer.jpg") center no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+@media(max-width:1024px) {
+	.footer_anchor {
+		background-color: black;
+		height: 100%;
+	}
+
+	.footer_h {
+		width: 100%;
+		height: 100%;
+	}
+
+	.footer_anchor_href::after {
+		content: "";
+		display: block;
+		width: 130px;
+		height: 2px;
+		background-color: #ffc600;
+		position: absolute;
+		bottom: -60px;
+	}
+
+	.footer_anchor .social_loc {
+		padding-left: 25px;
+		margin-bottom: 20px;
+	}
+}
+
+@media(max-width:690px) {
+	.footer_anchor_header {
+		font-size: 45px;
+	}
+}
+
+@media(max-width:535px) {
+	.footer_anchor_header {
+		font-size: 35px;
+	}
+
+	.footer_anchor_header .yellow_letter {
+		font-size: 45px;
+		letter-spacing: -3px;
+	}
+
+	.anchor {
+		font-size: 14px;
+	}
+
+	.footer_anchor_href::after {
+		width: 100px;
+	}
+}
+
+@media(max-width:470px) {
+	.footer_col {
+		display: grid;
+		grid-template-columns: 100% 0%;
+	}
+
+	.footer_h {
+		width: 100%;
+		height: 100%;
+		background: url("./footer.jpg") center no-repeat;
+		background-size: cover;
+		background-attachment: scroll;
+		display: none;
+	}
+}
