@@ -1316,7 +1316,7 @@ input[type="radio"]:checked+label {
 
 	.info_item {
 		padding-right: 5px;
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	.info_img {
@@ -1353,9 +1353,10 @@ input[type="radio"]:checked+label {
 	}
 }
 
-@media(max-width:630px) {
+@media(max-width:1024px) {
 	.info_content {
 		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 
 	.info_item {
@@ -1374,6 +1375,12 @@ input[type="radio"]:checked+label {
 	.info_content {
 		justify-content: flex-end;
 	}
+}
+@media(max-width:520px) {
+	.blog_col {
+			display: grid;
+			grid-template-columns: 40% 60%;
+		}
 }
 
 /* contact */
