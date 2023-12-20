@@ -1,207 +1,97 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>lab1</title>
+	<title>Online Timer</title>
 </head>
 
-<body style="background-color: #d9d8d8;">
+<body>
 
-	<header id="header" style="margin-left:30px;">
-		<h1>Лабораторна робота №1</h1>
-		<h2>Основи побудови та публікації HTML-документів</h2>
-		<h3>Варіант 1</h3>
-		<hr>
-	</header>
+	<h1 id="timer">00:00:00</h1>
+	<label for="durationInput">Set Timer (in seconds): </label>
+	<input type="number" id="durationInput" placeholder="Enter duration">
+	<button onclick="startTimer()">Start</button>
+	<button onclick="pauseTimer()">Pause</button>
+	<button onclick="stopTimer()">Stop</button>
 
-	<div id="formatted_text" style="margin-left:30px;">
-		<p>
-			Для будь-якого натурального числа
-			<b>n&gt;2</b>
-			<br>
-			рівняння
-			<i>a<sup>n</sup>+b<sup>n</sup>=c<sup>n</sup></i>
-			<b>не має рішень</b>
-			при
-			<br>
-			цілих ненульових числах a, b ,c.
-		</p>
-		<hr>
-	</div>
+	<script>
+		let timerInterval;
+		let timerDuration = 180; // 3 minutes in seconds
+		let timerRunning = false;
 
-	<div id="List">
-		<ul>
-			<li><b>Факультет комп’ютерних наук</b>
-				<ul>
-					<li>
-						Кафедра штучного інтелекту (ШІ)
-						<ul>
-							<li>
-								Дискретна математика
-							</li>
-							<li>
-								Функціональне програмування
-							</li>
-						</ul>
-					</li>
-					<li>Кафедра системотехніки (СТ)
-						<ul>
-							<li>
-								Системний аналіз
-							</li>
-							<li>
-								моделювання та оптимізація складних організаційно-технічних систем.
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><b>Факультет комп’ютерної інженерії та управління</b>
-				<ul>
-					<li>
-						Кафедра електронних обчислювальних машин (ЕОМ)
-						<ul>
-							<li>
-								Програмування на C
-							</li>
-							<li>
-								Програмування на Python
-							</li>
-						</ul>
-					</li>
-					<li>
-						Кафедра автоматизації проектування обчислювальної техніки (АПОТ)
-						<ul>
-							<li>
-								Мобільні системи
-							</li>
-							<li>
-								Cloud-технології
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><b>Факультет автоматики і комп’ютеризованих технологій</b>
-				<ul>
-					<li>
-						Кафедра фізики
-						<ul>
-							<li>
-								Фізика
-							</li>
-						</ul>
-					</li>
-					<li>
-						Кафедра охорони праці (ОП)
-						<ul>
-							<li>
-								Безпека життєдіяльності
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+		function startTimer() {
+			const inputElement = document.getElementById('durationInput');
+			const inputValue = parseFloat(inputElement.value);
+			if (!isNaN(inputValue) && inputValue > 0) {
+				timerDuration = inputValue;
+				timerRunning = true;
+				timerInterval = setInterval(updateTimer, 1000);
+				updateTimer();
+			} else {
+				alert('Please enter a valid positive number for the duration.');
+			}
+		}
 
-	<div id="exchange_rate" style="margin-left:30px;">
-		<hr>
-		<h3>Курс валют</h3>
-		<table border="1px" width="33%">
-			<thead>
-				<th>Назва валюти</th>
-				<th>Літерний код</th>
-				<th>Купівля</th>
-			</thead>
-			<tbody style="text-align: center;">
-				<tr>
-					<td>Долар</td>
-					<td>USD</td>
-					<td>37.47</td>
-				</tr>
-				<tr>
-					<td>Євро</td>
-					<td>EUR</td>
-					<td>39.97</td>
-				</tr>
-				<tr>
-					<td>Дирхам</td>
-					<td>AED</td>
-					<td>8.75</td>
-				</tr>
-				<tr>
-					<td>Вірменські драми</td>
-					<td>AMD</td>
-					<td>0.08</td>
-				</tr>
-				<tr>
-					<td>Австралійські долари</td>
-					<td>AUD</td>
-					<td>22.32</td>
-				</tr>
-				<tr>
-					<td>Англійські фунти стерлінгів</td>
-					<td>GBP</td>
-					<td>45.40</td>
-				</tr>
-				<tr>
-					<td>Болгарські леви</td>
-					<td>BGN</td>
-					<td>20</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<hr>
-	</div>
+		function pauseTimer() {
+			clearInterval(timerInterval);
+			timerRunning = false;
+		}
 
-	<div id="voting" style="margin-left:30px;">
-		<h3>Голосування</h3>
-		<form method="post">
-			<label for="first_name">Ім'я:</label>
-			<input type="text" id="first_name" name="first_name" placeholder="Введіть ваше ім'я" required />
-			<br>
-			<br>
-			
-			<label for="last_name">Прізвище:</label>
-			<input type="text" id="last_name" name="last_name" placeholder="Введіть ваше прізвище" required />
-			<br>
-			<br>
+		function stopTimer() {
+			clearInterval(timerInterval);
+			timerRunning = false;
+			timerDuration = 180; // Reset duration to 3 minutes
+			updateTimer();
+		}
 
-			<label for="group">Група:</label>
-			<input type="text" id="group" name="group" placeholder="Введіть вашу групу" required />
-			<br>
-			<br>
+		function updateTimer() {
+			const timerElement = document.getElementById('timer');
+			const hours = Math.floor(timerDuration / 3600);
+			const minutes = Math.floor((timerDuration % 3600) / 60);
+			const seconds = timerDuration % 60;
 
-			<label for="choice">Чи подобається вам навчатись в ХНУРЕ?</label>
-			<br>
-			<br>
-			<input type="radio" id="choice" name="agree" value="Yes">Так
-			<input type="radio" id="choice" name="disagree" value="No">Ні
-			<br>
-			<br>
+			timerElement.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
 
-			<input type="submit" value="Надіслати">
-			<input type="reset" value="Очистити">
-		</form>
-		<br>
-		<hr>
-	</div>
+			document.title = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)} - Online Timer`;
 
-	<div id="navigation" >
-		<h3 style="margin-left:30px;">Навігація по сторінці</h3>
-		<ul>
-		<li><a href="#formatted_text">Відформатований текст</a></li>
-		<li><a href="#List">Списки факультетів</a></li>
-		<li><a href="#exchange_rate">Курс валют</a></li>
-		<li><a href="#voting">Голосування</a></li>
-	</ul>
-	</div>
-	
-	<footer id="footer" style="margin-left:30px; height: 15px; text-align: center;" >
-		<p><i>Виконав Бернадський Андрій з групи КУІКІ-21-4</i></p>
-	</footer>
+			if (timerDuration <= 0) {
+				clearInterval(timerInterval);
+				timerRunning = false;
+				// Perform action after timer completion (e.g., show notification)
+				showNotification('Time is up!');
+				document.getElementById('timer').textContent = '00:00:00';
+			} else {
+				timerDuration--;
+			}
+		}
+
+		function formatTime(time) {
+			return time < 10 ? `0${time}` : time;
+		}
+
+		function showNotification(message) {
+			if ('Notification' in window) {
+				Notification.requestPermission().then(function (permission) {
+					if (permission === 'granted') {
+						const notification = new Notification('Online Timer', {
+							body: message,
+						});
+					}
+				});
+			}
+		}
+
+		// Check for GET parameters and update timer if present
+		const urlParams = new URLSearchParams(window.location.search);
+		const timerPeriod = parseFloat(urlParams.get('period'));
+		if (!isNaN(timerPeriod) && timerPeriod > 0) {
+			timerDuration = timerPeriod;
+			startTimer(); // Start the timer automatically
+		}
+	</script>
+
+</body>
+
+</html>
