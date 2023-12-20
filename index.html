@@ -21,17 +21,32 @@
 		let timerDuration = 180; // 3 minutes in seconds
 		let timerRunning = false;
 
+		// Додаємо логіку для зчитування параметра "period" з URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const periodParam = urlParams.get('period');
+		if (periodParam) {
+			const periodValue = parseInt(periodParam);
+			if (!isNaN(periodValue) && periodValue > 0) {
+				timerDuration = periodValue;
+			}
+		}
+
 		function startTimer() {
+			if (timerRunning) {
+				// Якщо таймер вже працює, відновлюємо початковий стан
+				clearInterval(timerInterval);
+				timerRunning = false;
+				timerDuration = periodParam; // або виберіть початкове значення таймера за замовчуванням
+			}
+
 			const inputElement = document.getElementById('durationInput');
 			const inputValue = parseFloat(inputElement.value);
 			if (!isNaN(inputValue) && inputValue > 0) {
 				timerDuration = inputValue;
-				timerRunning = true;
-				timerInterval = setInterval(updateTimer, 1000);
-				updateTimer();
-			} else {
-				alert('Please enter a valid positive number for the duration.');
 			}
+			timerRunning = true;
+			timerInterval = setInterval(updateTimer, 1000);
+			updateTimer();
 		}
 
 		function pauseTimer() {
@@ -83,13 +98,6 @@
 			}
 		}
 
-		// Check for GET parameters and update timer if present
-		const urlParams = new URLSearchParams(window.location.search);
-		const timerPeriod = parseFloat(urlParams.get('period'));
-		if (!isNaN(timerPeriod) && timerPeriod > 0) {
-			timerDuration = timerPeriod;
-			startTimer(); // Start the timer automatically
-		}
 	</script>
 
 </body>
