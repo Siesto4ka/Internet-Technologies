@@ -44,6 +44,10 @@
 			if (!isNaN(inputValue) && inputValue > 0) {
 				timerDuration = inputValue;
 			}
+			if ( inputValue < 0) {
+				alert('Please enter a positive number for the duration.');
+				return;
+			}
 			timerRunning = true;
 			timerInterval = setInterval(updateTimer, 1000);
 			updateTimer();
