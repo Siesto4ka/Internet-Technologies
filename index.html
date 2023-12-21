@@ -20,8 +20,9 @@
 		let timerInterval;
 		let timerDuration = 180; // 3 minutes in seconds
 		let timerRunning = false;
+		let remainingDuration = 0;
 
-		// Додаємо логіку для зчитування параметра "period" з URL
+		//  логіка для зчитування параметра "period" з URL
 		const urlParams = new URLSearchParams(window.location.search);
 		const periodParam = urlParams.get('period');
 		if (periodParam) {
@@ -33,10 +34,8 @@
 
 		function startTimer() {
 			if (timerRunning) {
-				// Якщо таймер вже працює, відновлюємо початковий стан
 				clearInterval(timerInterval);
 				timerRunning = false;
-				timerDuration = periodParam; // або виберіть початкове значення таймера за замовчуванням
 			}
 
 			const inputElement = document.getElementById('durationInput');
@@ -44,24 +43,34 @@
 			if (!isNaN(inputValue) && inputValue > 0) {
 				timerDuration = inputValue;
 			}
-			if ( inputValue <= 0) {
+			if (inputValue <= 0) {
 				alert('Please enter a positive number for the duration.');
 				return;
 			}
+
+			if (remainingDuration > 0) {
+				timerDuration = remainingDuration;
+				remainingDuration = 0;
+			}
+
 			timerRunning = true;
 			timerInterval = setInterval(updateTimer, 1000);
 			updateTimer();
 		}
 
 		function pauseTimer() {
-			clearInterval(timerInterval);
-			timerRunning = false;
+			if (timerRunning) {
+				clearInterval(timerInterval);
+				timerRunning = false;
+				remainingDuration = timerDuration;
+			}
 		}
 
 		function stopTimer() {
 			clearInterval(timerInterval);
 			timerRunning = false;
 			timerDuration = 180; // Reset duration to 3 minutes
+			remainingDuration = 0;
 			updateTimer();
 		}
 
@@ -78,7 +87,6 @@
 			if (timerDuration <= 0) {
 				clearInterval(timerInterval);
 				timerRunning = false;
-				// Perform action after timer completion (e.g., show notification)
 				showNotification('Time is up!');
 				document.getElementById('timer').textContent = '00:00:00';
 			} else {
